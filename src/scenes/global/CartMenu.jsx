@@ -66,7 +66,7 @@ const CartMenu = () => {
                 <FlexBox p={'15px 0'}>
                   <Box flex='1 1 40%'>
                     <img
-                      src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                      src={`https://ecommerce-gced.onrender.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                       alt={item?.name}
                       width='123px'
                       height='164px'

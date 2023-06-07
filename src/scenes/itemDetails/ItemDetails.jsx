@@ -23,7 +23,7 @@ const ItemDetails = () => {
 
   const getItem = async () => {
     const res = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
+      `https://ecommerce-gced.onrender.com/api/items/${itemId}?populate=image`,
       {
         method: 'GET',
       }
@@ -35,9 +35,12 @@ const ItemDetails = () => {
   };
 
   const getItems = async () => {
-    const res = await fetch('http://localhost:1337/api/items?populate=image', {
-      method: 'GET',
-    });
+    const res = await fetch(
+      'https://ecommerce-gced.onrender.com/api/items?populate=image',
+      {
+        method: 'GET',
+      }
+    );
 
     const items = await res.json();
 
@@ -54,7 +57,7 @@ const ItemDetails = () => {
       <Box display='flex' flexWrap='wrap' columnGap='40px'>
         <Box flex='1 1 40%' mb='40px'>
           <img
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`https://ecommerce-gced.onrender.com${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             alt={item?.name}
             width='100%'
             style={{ objectFit: 'cover' }}

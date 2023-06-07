@@ -103,7 +103,7 @@ const Checkout = () => {
       })),
     };
 
-    const res = await fetch('http://localhost:1337/api/orders', {
+    const res = await fetch('https://ecommerce-gced.onrender.com/api/orders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(requestBody),

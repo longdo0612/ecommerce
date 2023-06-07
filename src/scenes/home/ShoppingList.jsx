@@ -15,9 +15,12 @@ const ShoppingList = () => {
   };
 
   const getItems = async () => {
-    const res = await fetch('http://localhost:1337/api/items?populate=image', {
-      method: 'GET',
-    });
+    const res = await fetch(
+      'https://ecommerce-gced.onrender.com/api/items?populate=image',
+      {
+        method: 'GET',
+      }
+    );
 
     const items = await res.json();
 
